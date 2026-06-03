@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro de Pacientes - Consultorio Médico RMRD</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+
+    <style>
+        body {
+            font-family: 'Open Sans', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f5f0f6; 
+            color: #333333;
+        }
+
+        .cabecera {
+            background-color: white;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 25px 20px;
+            gap: 15px;
+            border-bottom: 4px solid #5b21b6; 
+        }
+
+        .cabecera h1 {
+            font-family: 'Montserrat', sans-serif;
+            color: #5b21b6; 
+            margin: 0;
+            font-size: 30px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            text-align: center;
+        }
+
+        .logo-contenedor img {
+            height: 90px;
+            background-color: white;
+            padding: 5px;
+            border-radius: 8px;
+        }
+
+       
+        .menu-navegacion {
+            display: flex;
+            justify-content: space-around;
+            background-color: #edd8f5; 
+            padding: 15px 0;
+            border-bottom: 1px solid #5b21b6;
+        }
+
+        .menu-navegacion a {
+            font-family: 'Montserrat', sans-serif;
+            color: #1e1b4b; 
+            text-decoration: none; 
+            font-weight: 700;
+            font-size: 16px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            transition: color 0.3s;
+        }
+
+        .menu-navegacion a:hover {
+            color: #5b21b6;
+            text-decoration: none; 
+            transition: all 0.3s ease; 
+        }
+
+     
+        .contenedor-formulario {
+            max-width: 600px;
+            margin: 40px auto;
+            padding: 30px;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(91, 33, 182, 0.08);
+            border: 1px solid #edd8f5;
+        }
+
+        .contenedor-formulario h2 {
+            font-family: 'Montserrat', sans-serif;
+            color: #1e1b4b; 
+            text-align: center;
+            margin-bottom: 25px;
+            text-transform: uppercase;
+            font-size: 22px;
+            letter-spacing: 1px;
+        }
+
+        
+        .grupo-campo {
+            margin-bottom: 20px;
+        }
+
+        .grupo-campo label {
+            display: block;
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 600;
+            margin-bottom: 8px;
+            color: #5b21b6;
+            font-size: 14px;
+        }
+
+        .grupo-campo input, 
+        .grupo-campo select,
+        .grupo-campo textarea {
+            width: 100%;
+            padding: 11px;
+            border: 1px solid #5b21b6;
+            border-radius: 4px;
+            font-family: 'Open Sans', sans-serif;
+            font-size: 14px;
+            box-sizing: border-box;
+            background-color: #fdfbfe;
+            transition: all 0.3s ease;
+        }
+
+        .grupo-campo input:focus, 
+        .grupo-campo select:focus,
+        .grupo-campo textarea:focus {
+            outline: none;
+            border-color: #1e1b4b;
+            background-color: #fff;
+            box-shadow: 0 0 5px rgba(30, 27, 75, 0.2);
+        }
+
+        .grupo-campo select {
+            cursor: pointer;
+            height: 44px;
+        }
+
+       
+        .btn-enviar {
+            width: 100%;
+            padding: 12px;
+            background-color: #1e1b4b;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 700;
+            font-size: 16px;
+            text-transform: uppercase;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            margin-top: 10px;
+            letter-spacing: 0.5px;
+        }
+
+        .btn-enviar:hover {
+            background-color: #5b21b6;
+        }
+
+        footer {
+            font-family: 'Montserrat', sans-serif;
+            margin-top: 60px;
+            padding: 15px;
+            border-top: 2px dashed #5b21b6; 
+            font-size: 11px;
+            color: #555555;
+            font-weight: 700;
+            letter-spacing: 0.5px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+
+    <header class="cabecera">
+        <h1>Consultorio Médico RMRD</h1>
+        <div class="logo-contenedor">
+            <img src="logo2.png" alt="Logo Consultorio">
+        </div>
+    </header>
+
+    <nav class="menu-navegacion">
+        <a href="formupacie.html">Clientes</a>
+        <a href="formdoctores.html">Médicos</a>
+        <a href="formpersonal.html">Personal</a>
+        <a href="formcitas.html">Citas</a>
+    </nav>
+
+    <main class="contenedor-formulario">
+        <a href="index.html" style="display: inline-block; margin-bottom: 15px; color: #555; text-decoration: none; font-weight: 600; font-size: 14px; font-family: 'Montserrat', sans-serif;">&larr; Volver al Menú Principal</a>
+        
+        <h2>Registro de Pacientes</h2>
+        
+        <form action="#" method="POST">
+            <div class="grupo-campo">
+                <label for="idPaciente">ID Paciente:</label>
+                <input type="text" id="idPaciente" name="idPaciente" placeholder="Ej. 1" required>
+            </div>
+
+            <div class="grupo-campo">
+                <label for="nombre">Nombre(s):</label>
+                <input type="text" id="nombre" name="nombre" placeholder="Ej. Alonso" required>
+            </div>
+
+            <div class="grupo-campo">
+                <label for="apellidoPaterno">Apellido Paterno:</label>
+                <input type="text" id="apellidoPaterno" name="apellidoPaterno" placeholder="Ej. Armendariz" required>
+            </div>
+
+            <div class="grupo-campo">
+                <label for="apellidoMaterno">Apellido Materno:</label>
+                <input type="text" id="apellidoMaterno" name="apellidoMaterno" placeholder="Ej. Dominguez" required>
+            </div>
+
+            <div class="grupo-campo">
+                <label for="fechaNacimiento">Fecha de Nacimiento:</label>
+                <input type="date" id="fechaNacimiento" name="fechaNacimiento" required>
+            </div>
+
+            <div class="grupo-campo">
+                <label for="genero">Género:</label>
+                <select id="genero" name="genero" required>
+                    <option value="" disabled selected hidden>Seleccione una opción</option>
+                    <option value="femenino">Femenino</option>
+                    <option value="masculino">Masculino</option>
+                    <option value="otro">Otro / No especificar</option>
+                </select>
+            </div>
+
+            <div class="grupo-campo">
+                <label for="tipoSangre">Tipo de Sangre:</label>
+                <select id="tipoSangre" name="tipoSangre" required>
+                    <option value="" disabled selected hidden>Seleccione el tipo de sangre</option>
+                    <option value="A+">A+</option>
+                    <option value="A-">A-</option>
+                    <option value="B+">B+</option>
+                    <option value="B-">B-</option>
+                    <option value="AB+">AB+</option>
+                    <option value="AB-">AB-</option>
+                    <option value="O+">O+</option>
+                    <option value="O-">O-</option>
+                </select>
+            </div>
+
+            <div class="grupo-campo">
+                <label for="condiciones">Condiciones Médicas / Antecedentes:</label>
+                <textarea id="condiciones" name="condiciones" rows="3" placeholder="Ej. Diabetes, Asma, Alergias, o ninguna" required></textarea>
+            </div>
+
+            <button type="submit" class="btn-enviar">Registrar Paciente</button>
+        </form>
+    </main>
+
+    <footer>
+        REBECA MIRANDA RASCON DEVORA 4;J 24308051280884 PROGRAMACION
+    </footer>
+
+</body>
+</html>

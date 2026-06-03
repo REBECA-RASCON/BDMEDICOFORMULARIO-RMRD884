@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro de Citas - Consultorio Médico RMRD</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+
+    <style>
+        body {
+            font-family: 'Open Sans', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #fff2f7; 
+            color: #333333;
+        }
+
+        .cabecera {
+            background-color: white;
+            display: flex;
+            flex-direction: column; 
+            align-items: center;    
+            justify-content: center;
+            padding: 25px 20px;
+            gap: 15px;              
+            border-bottom: 4px solid #ff6b8b; 
+        }
+
+        .cabecera h1 {
+            font-family: 'Montserrat', sans-serif;
+            color: #002060; 
+            margin: 0;
+            font-size: 30px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            text-align: center;    
+        }
+
+        .logo-contenedor img {
+            height: 90px;
+            background-color: white;
+            padding: 5px;
+            border-radius: 8px;
+        }
+
+        
+        .menu-navegacion {
+            display: flex;
+            justify-content: space-around;
+            background-color: #fff0f3; 
+            padding: 15px 0;
+            border-bottom: 1px solid #ff6b8b;
+        }
+
+        .menu-navegacion a {
+            font-family: 'Montserrat', sans-serif;
+            color: #b52a7b; 
+            text-decoration: none; 
+            font-weight: 700;
+            font-size: 16px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            transition: color 0.3s;
+        }
+
+        .menu-navegacion a:hover {
+            color: #002060;
+            text-decoration: none; 
+            transition: all 0.3s ease; 
+        }
+
+
+        .contenedor-formulario {
+            max-width: 600px;
+            margin: 40px auto;
+            padding: 30px;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(255, 107, 139, 0.1);
+            border: 1px solid #fff0f3;
+        }
+
+        .contenedor-formulario h2 {
+            font-family: 'Montserrat', sans-serif;
+            color: #b52a7b; 
+            text-align: center;
+            margin-bottom: 25px;
+            text-transform: uppercase;
+            font-size: 22px;
+            letter-spacing: 1px;
+        }
+
+        
+        .grupo-campo {
+            margin-bottom: 20px;
+        }
+
+        .grupo-campo label {
+            display: block;
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 600;
+            margin-bottom: 8px;
+            color: #002060;
+            font-size: 14px;
+        }
+
+        .grupo-campo input, 
+        .grupo-campo textarea {
+            width: 100%;
+            padding: 11px;
+            border: 1px solid #ff6b8b;
+            border-radius: 4px;
+            font-family: 'Open Sans', sans-serif;
+            font-size: 14px;
+            box-sizing: border-box;
+            background-color: #fffcfd;
+            transition: all 0.3s ease;
+        }
+
+        .grupo-campo input:focus, 
+        .grupo-campo textarea:focus {
+            outline: none;
+            border-color: #b52a7b;
+            background-color: #fff;
+            box-shadow: 0 0 5px rgba(181, 42, 123, 0.2);
+        }
+
+        
+        .btn-enviar {
+            width: 100%;
+            padding: 12px;
+            background-color: #002060;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 700;
+            font-size: 16px;
+            text-transform: uppercase;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            margin-top: 10px;
+            letter-spacing: 0.5px;
+        }
+
+        .btn-enviar:hover {
+            background-color: #b52a7b;
+        }
+
+        footer {
+            font-family: 'Montserrat', sans-serif;
+            margin-top: 60px;
+            padding: 15px;             
+            border-top: 2px dashed #ff6b8b;
+            font-size: 11px;          
+            color: #555555;           
+            font-weight: 700;
+            letter-spacing: 0.5px;
+            text-align: center;       
+        }
+    </style>
+</head>
+<body>
+
+    <header class="cabecera">
+        <h1>Consultorio Médico RMRD</h1>
+        <div class="logo-contenedor">
+            <img src="logo2.png" alt="Logo Consultorio">
+        </div>
+    </header>
+
+    <nav class="menu-navegacion">
+        <a href="formupacie.html">Clientes</a>
+        <a href="formdoctores.html">Médicos</a>
+        <a href="formpersonal.html">Personal</a>
+        <a href="formcitas.html">Citas</a>
+    </nav>
+
+    <main class="contenedor-formulario">
+        <a href="index.html" style="display: inline-block; margin-bottom: 15px; color: #555; text-decoration: none; font-weight: 600; font-size: 14px; font-family: 'Montserrat', sans-serif;">&larr; Volver al Menú Principal</a>
+        <h2>Registro de Citas</h2>
+        
+        <form action="#" method="POST">
+            <div class="grupo-campo">
+                <label for="idCita">ID Cita:</label>
+                <input type="text" id="idCita" name="idCita" placeholder="Ej. 354477" required>
+            </div>
+
+            <div class="grupo-campo">
+                <label for="paciente">Paciente:</label>
+                <input type="text" id="paciente" name="paciente" placeholder="Nombre completo del paciente" required>
+            </div>
+
+            <div class="grupo-campo">
+                <label for="doctor">Doctor / Médico:</label>
+                <input type="text" id="doctor" name="doctor" placeholder="Nombre del médico asignado" required>
+            </div>
+
+            <div class="grupo-campo">
+                <label for="fecha">Fecha:</label>
+                <input type="date" id="fecha" name="fecha" required>
+            </div>
+
+            <div class="grupo-campo">
+                <label for="hora">Hora:</label>
+                <input type="time" id="hora" name="hora" required>
+            </div>
+
+            <div class="grupo-campo">
+                <label for="sala">Sala:</label>
+                <input type="text" id="sala" name="sala" placeholder="Ej. Sala 15" required>
+            </div>
+
+            <div class="grupo-campo">
+                <label for="motivo">Motivo de la Cita:</label>
+                <textarea id="motivo" name="motivo" rows="3" placeholder="Describa los síntomas o el motivo de la consulta" required></textarea>
+            </div>
+
+            <button type="submit" class="btn-enviar">Registrar Cita</button>
+        </form>
+    </main>
+
+    <footer>
+        REBECA MIRANDA RASCON DEVORA 4;J 24308051280884 PROGRAMACION
+    </footer>
+
+</body>
+</html>
