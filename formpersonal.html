@@ -40,7 +40,7 @@
             text-align: center;
         }
 
-        .logo-contenedor img {
+        .logo_contenedor img {
             height: 90px;
             background-color: white;
             padding: 5px;
@@ -48,7 +48,7 @@
         }
 
         
-        .menu-navegacion {
+        .menu_navegacion {
             display: flex;
             justify-content: space-around;
             background-color: #fef3c7; 
@@ -56,7 +56,7 @@
             border-bottom: 1px solid #b7791f;
         }
 
-        .menu-navegacion a {
+        .menu_navegacion a {
             font-family: 'Montserrat', sans-serif;
             color: #744210; 
             text-decoration: none; 
@@ -67,14 +67,14 @@
             transition: color 0.3s;
         }
 
-        .menu-navegacion a:hover {
+        .menu_navegacion a:hover {
             color: #b7791f;
             text-decoration: none; 
             transition: all 0.3s ease; 
         }
 
         
-        .contenedor-formulario {
+        .contenedor_formulario {
             max-width: 600px;
             margin: 40px auto;
             padding: 30px;
@@ -84,7 +84,7 @@
             border: 1px solid #fef3c7;
         }
 
-        .contenedor-formulario h2 {
+        .contenedor_formulario h2 {
             font-family: 'Montserrat', sans-serif;
             color: #744210; 
             text-align: center;
@@ -95,11 +95,11 @@
         }
 
        
-        .grupo-campo {
+        .grupo_campo {
             margin-bottom: 20px;
         }
 
-        .grupo-campo label {
+        .grupo_campo label {
             display: block;
             font-family: 'Montserrat', sans-serif;
             font-weight: 600;
@@ -108,8 +108,8 @@
             font-size: 14px;
         }
 
-        .grupo-campo input, 
-        .grupo-campo select {
+        .grupo_campo input, 
+        .grupo_campo select {
             width: 100%;
             padding: 11px;
             border: 1px solid #b7791f;
@@ -121,21 +121,21 @@
             transition: all 0.3s ease;
         }
 
-        .grupo-campo input:focus, 
-        .grupo-campo select:focus {
+        .grupo_campo input:focus, 
+        .grupo_campo select:focus {
             outline: none;
             border-color: #744210;
             background-color: #fff;
             box-shadow: 0 0 5px rgba(116, 66, 16, 0.2);
         }
 
-        .grupo-campo select {
+        .grupo_campo select {
             cursor: pointer;
             height: 44px;
         }
 
         
-        .boton-enviar {
+        .boton_enviar {
             width: 100%;
             padding: 12px;
             background-color: #744210;
@@ -152,7 +152,7 @@
             letter-spacing: 0.5px;
         }
 
-        .boton-enviar:hover {
+        .boton_enviar:hover {
             background-color: #b7791f;
         }
 
@@ -173,19 +173,19 @@
 
     <header class="cabecera">
         <h1>Consultorio Médico RMRD</h1>
-        <div class="logo-contenedor">
+        <div class="logo_contenedor">
             <img src="logo2.png" alt="Logo Consultorio">
         </div>
     </header>
 
-    <nav class="menu-navegacion">
+    <nav class="menu_navegacion">
         <a href="formupacie.html">Clientes</a>
         <a href="formdoctores.html">Médicos</a>
         <a href="formpersonal.html">Personal</a>
         <a href="formcitas.html">Citas</a>
     </nav>
 
-    <main class="contenedor-formulario">
+    <main class="contenedor_formulario">
         <a href="index.html" style="display: inline-block; margin-bottom: 15px; color: #555; text-decoration: none; font-weight: 600; font-size: 14px; font-family: 'Montserrat', sans-serif;">&larr; Volver al Menú Principal</a>
 
         <h2>Registro de Personal</h2>
@@ -196,22 +196,22 @@
                 <input type="text" id="idPersonal" name="idPersonal" placeholder="Ej. 13959" required>
             </div>
 
-            <div class="grupo-campo">
+            <div class="grupo_campo">
                 <label for="nombre">Nombre(s):</label>
                 <input type="text" id="nombre" name="nombre" placeholder="Ej. Elena Clara" required>
             </div>
 
-            <div class="grupo-campo">
+            <div class="grupo_campo">
                 <label for="apellidoPaterno">Apellido Paterno:</label>
                 <input type="text" id="apellidoPaterno" name="apellidoPaterno" placeholder="Ej. Avila" required>
             </div>
 
-            <div class="grupo-campo">
+            <div class="grupo_campo">
                 <label for="apellidoMaterno">Apellido Materno:</label>
                 <input type="text" id="apellidoMaterno" name="apellidoMaterno" placeholder="Ej. Rodriguez" required>
             </div>
 
-            <div class="grupo-campo">
+            <div class="grupo_campo">
                 <label for="genero">Género:</label>
                 <select id="genero" name="genero" required>
                     <option value="" disabled selected hidden>Seleccione una opción</option>
@@ -221,32 +221,32 @@
                 </select>
             </div>
 
-            <div class="grupo-campo">
+            <div class="grupo_campo">
                 <label for="rol">Rol / Puesto:</label>
                 <input type="text" id="rol" name="rol" placeholder="Ej. Recepcionista, Enfermero, Limpieza..." required>
             </div>
 
-            <div class="grupo-campo">
+            <div class="grupo_campo">
                 <label for="especialidad">Especialidad / Área:</label>
                 <input type="text" id="especialidad" name="especialidad" placeholder="Ej. Atención al cliente, Quirúrgica..." required>
             </div>
 
-            <div class="grupo-campo">
+            <div class="grupo_campo">
                 <label for="cedula">Cédula:</label>
                 <input type="text" id="cedula" name="cedula" placeholder="Número de cédula o registro laboral" required>
             </div>
 
-            <div class="grupo-campo">
+            <div class="grupo_campo">
                 <label for="rfc">RFC:</label>
                 <input type="text" id="rfc" name="rfc" placeholder="Clave de Registro Federal" style="text-transform: uppercase;" required>
             </div>
 
-            <div class="grupo-campo">
+            <div class="grupo_campo">
                 <label for="correo">Correo Electrónico:</label>
                 <input type="email" id="correo" name="correo" placeholder="ejemplo@correo.com" required>
             </div>
 
-            <button type="submit" class="boton-enviar">Registrar Personal</button>
+            <button type="submit" class="boton_enviar">Registrar Personal</button>
         </form>
     </main>
 
