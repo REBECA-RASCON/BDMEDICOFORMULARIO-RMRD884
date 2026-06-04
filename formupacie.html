@@ -40,7 +40,7 @@
             text-align: center;
         }
 
-        .logo-contenedor img {
+        .logo_contenedor img {
             height: 90px;
             background-color: white;
             padding: 5px;
@@ -48,7 +48,7 @@
         }
 
        
-        .menu-navegacion {
+        .menu_navegacion {
             display: flex;
             justify-content: space-around;
             background-color: #edd8f5; 
@@ -56,7 +56,7 @@
             border-bottom: 1px solid #5b21b6;
         }
 
-        .menu-navegacion a {
+        .menu_navegacion a {
             font-family: 'Montserrat', sans-serif;
             color: #1e1b4b; 
             text-decoration: none; 
@@ -67,14 +67,14 @@
             transition: color 0.3s;
         }
 
-        .menu-navegacion a:hover {
+        .menu_navegacion a:hover {
             color: #5b21b6;
             text-decoration: none; 
             transition: all 0.3s ease; 
         }
 
      
-        .contenedor-formulario {
+        .contenedor_formulario {
             max-width: 600px;
             margin: 40px auto;
             padding: 30px;
@@ -84,7 +84,7 @@
             border: 1px solid #edd8f5;
         }
 
-        .contenedor-formulario h2 {
+        .contenedor_formulario h2 {
             font-family: 'Montserrat', sans-serif;
             color: #1e1b4b; 
             text-align: center;
@@ -95,11 +95,11 @@
         }
 
         
-        .grupo-campo {
+        .grupo_campo {
             margin-bottom: 20px;
         }
 
-        .grupo-campo label {
+        .grupo_campo label {
             display: block;
             font-family: 'Montserrat', sans-serif;
             font-weight: 600;
@@ -108,9 +108,9 @@
             font-size: 14px;
         }
 
-        .grupo-campo input, 
-        .grupo-campo select,
-        .grupo-campo textarea {
+        .grupo_campo input, 
+        .grupo_campo select,
+        .grupo_campo textarea {
             width: 100%;
             padding: 11px;
             border: 1px solid #5b21b6;
@@ -122,22 +122,22 @@
             transition: all 0.3s ease;
         }
 
-        .grupo-campo input:focus, 
-        .grupo-campo select:focus,
-        .grupo-campo textarea:focus {
+        .grupo_campo input:focus, 
+        .grupo_campo select:focus,
+        .grupo_campo textarea:focus {
             outline: none;
             border-color: #1e1b4b;
             background-color: #fff;
             box-shadow: 0 0 5px rgba(30, 27, 75, 0.2);
         }
 
-        .grupo-campo select {
+        .grupo_campo select {
             cursor: pointer;
             height: 44px;
         }
 
        
-        .boton-enviar {
+        .boton_enviar {
             width: 100%;
             padding: 12px;
             background-color: #1e1b4b;
@@ -154,7 +154,7 @@
             letter-spacing: 0.5px;
         }
 
-        .boton-enviar:hover {
+        .boton_enviar:hover {
             background-color: #5b21b6;
         }
 
@@ -175,50 +175,50 @@
 
     <header class="cabecera">
         <h1>Consultorio Médico RMRD</h1>
-        <div class="logo-contenedor">
+        <div class="logo_contenedor">
             <img src="logo2.png" alt="Logo Consultorio">
         </div>
     </header>
 
-    <nav class="menu-navegacion">
+    <nav class="menu_navegacion">
         <a href="formupacie.html">Clientes</a>
         <a href="formdoctores.html">Médicos</a>
         <a href="formpersonal.html">Personal</a>
         <a href="formcitas.html">Citas</a>
     </nav>
 
-    <main class="contenedor-formulario">
+    <main class="contenedor_formulario">
         <a href="index.html" style="display: inline-block; margin-bottom: 15px; color: #555; text-decoration: none; font-weight: 600; font-size: 14px; font-family: 'Montserrat', sans-serif;">&larr; Volver al Menú Principal</a>
         
         <h2>Registro de Pacientes</h2>
         
         <form action="#" method="POST">
-            <div class="grupo-campo">
+            <div class="grupo_campo">
                 <label for="idPaciente">ID Paciente:</label>
                 <input type="text" id="idPaciente" name="idPaciente" placeholder="Ej. 1" required>
             </div>
 
-            <div class="grupo-campo">
+            <div class="grupo_campo">
                 <label for="nombre">Nombre(s):</label>
                 <input type="text" id="nombre" name="nombre" placeholder="Ej. Alonso" required>
             </div>
 
-            <div class="grupo-campo">
+            <div class="grupo_campo">
                 <label for="apellidoPaterno">Apellido Paterno:</label>
                 <input type="text" id="apellidoPaterno" name="apellidoPaterno" placeholder="Ej. Armendariz" required>
             </div>
 
-            <div class="grupo-campo">
+            <div class="grupo_campo">
                 <label for="apellidoMaterno">Apellido Materno:</label>
                 <input type="text" id="apellidoMaterno" name="apellidoMaterno" placeholder="Ej. Dominguez" required>
             </div>
 
-            <div class="grupo-campo">
+            <div class="grupo_campo">
                 <label for="fechaNacimiento">Fecha de Nacimiento:</label>
                 <input type="date" id="fechaNacimiento" name="fechaNacimiento" required>
             </div>
 
-            <div class="grupo-campo">
+            <div class="grupo_campo">
                 <label for="genero">Género:</label>
                 <select id="genero" name="genero" required>
                     <option value="" disabled selected hidden>Seleccione una opción</option>
@@ -228,7 +228,7 @@
                 </select>
             </div>
 
-            <div class="grupo-campo">
+            <div class="grupo_campo">
                 <label for="tipoSangre">Tipo de Sangre:</label>
                 <select id="tipoSangre" name="tipoSangre" required>
                     <option value="" disabled selected hidden>Seleccione el tipo de sangre</option>
@@ -243,12 +243,12 @@
                 </select>
             </div>
 
-            <div class="grupo-campo">
+            <div class="grupo_campo">
                 <label for="condiciones">Condiciones Médicas / Antecedentes:</label>
                 <textarea id="condiciones" name="condiciones" rows="3" placeholder="Ej. Diabetes, Asma, Alergias, o ninguna" required></textarea>
             </div>
 
-            <button type="submit" class="boton-enviar">Registrar Paciente</button>
+            <button type="submit" class="boton_enviar">Registrar Paciente</button>
         </form>
     </main>
 
