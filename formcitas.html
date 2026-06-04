@@ -14,19 +14,19 @@
             font-family: 'Open Sans', sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #fff2f7; 
+            background-color: #e6f0fa; /* Fondo azul claro original */
             color: #333333;
         }
 
         .cabecera {
             background-color: white;
             display: flex;
-            flex-direction: column; 
-            align-items: center;    
+            flex-direction: column;
+            align-items: center;
             justify-content: center;
             padding: 25px 20px;
-            gap: 15px;              
-            border-bottom: 4px solid #ff6b8b; 
+            gap: 15px;
+            border-bottom: 4px solid #002060; /* Borde azul marino */
         }
 
         .cabecera h1 {
@@ -37,7 +37,7 @@
             font-weight: 700;
             text-transform: uppercase;
             letter-spacing: 1px;
-            text-align: center;    
+            text-align: center;
         }
 
         .logo-contenedor img {
@@ -47,18 +47,18 @@
             border-radius: 8px;
         }
 
-        
+        /* Menú de navegación adaptado a los tonos azules */
         .menu-navegacion {
             display: flex;
             justify-content: space-around;
-            background-color: #fff0f3; 
+            background-color: #f0f6fc; 
             padding: 15px 0;
-            border-bottom: 1px solid #ff6b8b;
+            border-bottom: 1px solid #b0c9f0;
         }
 
         .menu-navegacion a {
             font-family: 'Montserrat', sans-serif;
-            color: #b52a7b; 
+            color: #2a75d3; /* Celeste corporativo */
             text-decoration: none; 
             font-weight: 700;
             font-size: 16px;
@@ -73,20 +73,20 @@
             transition: all 0.3s ease; 
         }
 
-
+        /* Contenedor del Formulario */
         .contenedor-formulario {
             max-width: 600px;
             margin: 40px auto;
             padding: 30px;
             background-color: white;
             border-radius: 8px;
-            box-shadow: 0 4px 12px rgba(255, 107, 139, 0.1);
-            border: 1px solid #fff0f3;
+            box-shadow: 0 4px 12px rgba(0, 32, 96, 0.08);
+            border: 1px solid #b0c9f0;
         }
 
         .contenedor-formulario h2 {
             font-family: 'Montserrat', sans-serif;
-            color: #b52a7b; 
+            color: #2a75d3; 
             text-align: center;
             margin-bottom: 25px;
             text-transform: uppercase;
@@ -94,7 +94,7 @@
             letter-spacing: 1px;
         }
 
-        
+        /* Elementos del Formulario */
         .grupo-campo {
             margin-bottom: 20px;
         }
@@ -112,24 +112,24 @@
         .grupo-campo textarea {
             width: 100%;
             padding: 11px;
-            border: 1px solid #ff6b8b;
+            border: 1px solid #b0c9f0; /* Bordes azulados claros */
             border-radius: 4px;
             font-family: 'Open Sans', sans-serif;
             font-size: 14px;
             box-sizing: border-box;
-            background-color: #fffcfd;
+            background-color: #fbfdfe;
             transition: all 0.3s ease;
         }
 
         .grupo-campo input:focus, 
         .grupo-campo textarea:focus {
             outline: none;
-            border-color: #b52a7b;
+            border-color: #2a75d3;
             background-color: #fff;
-            box-shadow: 0 0 5px rgba(181, 42, 123, 0.2);
+            box-shadow: 0 0 5px rgba(42, 117, 211, 0.2);
         }
 
-        
+        /* Botón de Enviar Azul Marino */
         .btn-enviar {
             width: 100%;
             padding: 12px;
@@ -148,19 +148,19 @@
         }
 
         .btn-enviar:hover {
-            background-color: #b52a7b;
+            background-color: #2a75d3;
         }
 
         footer {
             font-family: 'Montserrat', sans-serif;
             margin-top: 60px;
-            padding: 15px;             
-            border-top: 2px dashed #ff6b8b;
-            font-size: 11px;          
-            color: #555555;           
+            padding: 15px;
+            border-top: 2px dashed #002060; 
+            font-size: 11px;
+            color: #555555;
             font-weight: 700;
             letter-spacing: 0.5px;
-            text-align: center;       
+            text-align: center;
         }
     </style>
 </head>
@@ -174,14 +174,15 @@
     </header>
 
     <nav class="menu-navegacion">
-        <a href="formupacie.html">Clientes</a>
-        <a href="formdoctores.html">Médicos</a>
-        <a href="formpersonal.html">Personal</a>
-        <a href="formcitas.html">Citas</a>
+        <a href="pacientes.html">Clientes</a>
+        <a href="doctores.html">Médicos</a>
+        <a href="personal.html">Personal</a>
+        <a href="citas.html">Citas</a>
     </nav>
 
     <main class="contenedor-formulario">
         <a href="index.html" style="display: inline-block; margin-bottom: 15px; color: #555; text-decoration: none; font-weight: 600; font-size: 14px; font-family: 'Montserrat', sans-serif;">&larr; Volver al Menú Principal</a>
+
         <h2>Registro de Citas</h2>
         
         <form action="#" method="POST">
@@ -191,8 +192,18 @@
             </div>
 
             <div class="grupo-campo">
-                <label for="paciente">Paciente:</label>
-                <input type="text" id="paciente" name="paciente" placeholder="Nombre completo del paciente" required>
+                <label for="nombrePaciente">Nombre(s) del Paciente:</label>
+                <input type="text" id="nombrePaciente" name="nombrePaciente" placeholder="Ej. Odette" required>
+            </div>
+
+            <div class="grupo-campo">
+                <label for="apellidoPaternoPaciente">Apellido Paterno del Paciente:</label>
+                <input type="text" id="apellidoPaternoPaciente" name="apellidoPaternoPaciente" placeholder="Ej. Marquez" required>
+            </div>
+
+            <div class="grupo-campo">
+                <label for="apellidoMaternoPaciente">Apellido Materno del Paciente:</label>
+                <input type="text" id="apellidoMaternoPaciente" name="apellidoMaternoPaciente" placeholder="Ej. Pinto" required>
             </div>
 
             <div class="grupo-campo">
